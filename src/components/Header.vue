@@ -1,22 +1,22 @@
 <template>
-  <div class="header-bg">
+  <div class="header" id="header-component">
     <div class="max-w-6xl w-9/12 mx-auto">
       <div class="flex items-center py-8">
         <div class="header-logo">
-          <img class="w-48" src="@/assets/images/logo.png" alt="The Catasthrophe Logo">
+          <img class="w-48" src="images/logo.png" alt="The Catasthrophe Logo">
         </div>
         <ul class="header-nav">
-          <li class="header-nav__item"><a href="">Find a Furfriend</a></li>
-          <li class="header-nav__item"><a href="">Adopt Guide</a></li>
+          <li class="header-nav__item"><a href="#">Find a Furfriend</a></li>
+          <li class="header-nav__item"><a href="#">Adopt Guide</a></li>
         </ul>
       </div>
-      <div class="pt-20 pb-56">
+      <div class="pt-20 pb-64">
         <div class="max-w-lg w-9/12">
-          <h1 class="text-white text-6xl uppercase font-bold leading-tight tracking-wide mb-10">Last Chance to Adopt!</h1>
+          <h1 class="header__title title">Last Chance to Adopt!</h1>
           <div class="text-white text-2xl mb-6">
             timer here
           </div>
-          <a class="header-btn" href="#appointment-component">Make Appointment Now</a>
+          <a class="btn" href="#appointment-component" v-smooth-scroll>Make Appointment Now</a>
         </div>
       </div>
     </div>
@@ -30,9 +30,9 @@ export default {
 
 <style lang="scss" scoped>
 
-.header-bg {
-  background-image: url('../assets/images/bg_header1.jpg');
-  @apply bg-cover;
+.header {
+  background-image: url('/images/bg_header1.jpg');
+  @apply bg-cover bg-center;
 }
 
 .header-logo {
@@ -44,12 +44,12 @@ export default {
 }
 
 .header-nav__item {
-  color: #c48801;
-  @apply uppercase mx-8 text-xl;
+  // color: #c48801;
+  @apply text-common-grey uppercase mx-8 text-xl;
 }
 
-.header-btn {
-  @apply uppercase text-xl text-white py-3 px-8 bg-red-500 rounded shadow;
+.header__title {
+  @apply text-white uppercase mb-10;
 }
 
 </style>
