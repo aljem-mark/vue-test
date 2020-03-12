@@ -83,19 +83,7 @@ export default {
   },
   methods: {
     formSubmit: function() {
-      this.axios.post('/input.php',
-        this.form,
-        {
-          headers: {
-            'Content-Type': 'multipart/form-data'
-          }
-        }
-      ).then(function(res){
-        console.log(res.data);
-      })
-      .catch(function(error){
-        console.log('FAILURE!!', error);
-      });
+      alert('Submit')
     }
   }
 }
